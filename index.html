@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#eee"/>
+  <title>Kill the Cockroach</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/cockroach.png" />
+</head>
+<body>
+    <div class="container">
+      <div class="ui">
+        <h1>Kill the Cockroach</h1>
+        <div class="stats">
+          <span id="timer">Time: 0s</span>
+          <span id="score">Kills: 0</span>
+          <button id="muteBtn">🔊</button>
+          <button id="installBtn" hidden>📲 Install</button>
+        </div>
+      </div>
+  
+      <div id="gameArea"></div>
+  
+      <div id="howToPlay" class="overlay">
+        <div class="modal">
+          <h2>How to Play</h2>
+          <p>Click cockroaches using the slipper cursor to kill them!</p>
+          <p>Each kill changes the cockroach image and increases your score.</p>
+          <button onclick="startGame()">Start Game</button>
+        </div>
+      </div>
+  
+      <div id="gameOver" class="overlay" style="display: none;">
+        <div class="modal">
+          <h2>Game Over</h2>
+          <p id="finalScore">You killed 0 cockroaches!</p>
+          <button onclick="restartGame()">Play Again</button>
+        </div>
+      </div>
+  
+      <div id="offlineNotice" hidden>No internet connection</div>
+  
+      <audio id="bgMusic" src="assets/background-music.mp3" loop></audio>
+      <audio id="splatSound" src="assets/splat.mp3"></audio>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+  
+</html>

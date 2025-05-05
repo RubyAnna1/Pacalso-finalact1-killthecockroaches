@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #f9f7f0, #ffeaa7);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: #fff8dc;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.ui {
+    background: #fff3cd;
+    border-bottom: 3px solid #f5c518;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ui h1 {
+    font-size: 28px;
+    color: #d35400;
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#muteBtn, #installBtn {
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#muteBtn:hover, #installBtn:hover {
+    background-color: #e67e22;
+}
+
+#gameArea {
+    position: relative;
+    height: 500px;
+    background: #fef9e7;
+    border-top: 3px dashed #f5c518;
+    cursor: url('assets/slipper-cursor-v2.png') 20 10, auto;
+    overflow: hidden;
+}
+
+.cockroach {
+    width: 80px;
+    position: absolute;
+    transition: transform 0.2s ease;
+    z-index: 1000;
+}
+
+.cockroach:hover {
+    transform: scale(1.1);
+}
+
+#offlineNotice {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 2000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 221, 140, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.modal {
+    background: #fff;
+    color: #444;
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    border: 4px dashed #f1c40f;
+}
+
+.modal h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #c0392b;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.modal button {
+    padding: 10px 22px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.modal button:hover {
+    background-color: #27ae60;
+}
